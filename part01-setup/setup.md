@@ -100,35 +100,49 @@ Then open the folder in Cursor:
 
 ---
 
-## Step 5: Install Python Packages
+## Step 5: Create a Virtual Environment
 
-Open the **terminal inside Cursor** (`` Ctrl+` `` or View → Terminal).
+A virtual environment keeps this course's packages separate from your system Python. Open the **terminal inside Cursor** (`` Ctrl+` `` or View → Terminal).
 
 ### Mac
 ```bash
-pip3 install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 ### Windows
 ```
-pip install -r requirements.txt
+python -m venv .venv
+.venv\Scripts\activate
 ```
+
+You should see `(.venv)` appear at the start of your terminal prompt. This means you're inside the virtual environment.
+
+> **Every time you open Cursor for this course**, activate the venv first. Or: Cursor often detects `.venv/` automatically — if it asks you to select a Python interpreter, pick the one inside `.venv/`.
 
 ---
 
-## Step 6: Verify Everything Works
+## Step 6: Install Python Packages
 
-In the Cursor terminal, run:
+With the virtual environment activated:
 
-### Mac
 ```bash
-python3 part01-setup/test_setup.py
+pip install -r requirements.txt
 ```
 
-### Windows
-```
+(Inside a venv, `pip` works on both Mac and Windows — no need for `pip3`.)
+
+---
+
+## Step 7: Verify Everything Works
+
+With the venv still activated, run:
+
+```bash
 python part01-setup/test_setup.py
 ```
+
+(Inside a venv, `python` works on both Mac and Windows — no need for `python3`.)
 
 You should see:
 ```
@@ -139,11 +153,11 @@ openpyxl .......... OK
 All good! You're ready for BUAD449 Module 3.
 ```
 
-If any line says MISSING, raise your hand — a TA will help.
+If any line says MISSING, re-check that your venv is activated and run `pip install -r requirements.txt` again.
 
 ---
 
-## Step 7: Try Cursor
+## Step 8: Try Cursor
 
 1. Open any file in Cursor (try this `setup.md`)
 2. Press **Cmd+L** (Mac) or **Ctrl+L** (Windows) to open the chat panel
@@ -166,7 +180,8 @@ If any line says MISSING, raise your hand — a TA will help.
 |---|---|
 | `python: command not found` (Mac) | Use `python3` instead, or add alias to `~/.zshrc` |
 | `python is not recognized` (Windows) | Reinstall Python, check "Add to PATH" |
-| `pip: command not found` (Mac) | Use `pip3` instead |
+| `pip: command not found` (Mac) | Make sure venv is activated first. Outside venv, use `pip3` |
 | `git: command not found` (Mac) | Install Xcode Command Line Tools: `xcode-select --install` |
-| Cursor can't find Python | In Cursor, Cmd/Ctrl+Shift+P → "Python: Select Interpreter" → pick your Python 3.10+ |
-| `pip install` permission error | Try `pip install --user -r requirements.txt` |
+| No `(.venv)` in prompt after activate | Mac: make sure you ran `source .venv/bin/activate` (not just `.venv/bin/activate`). Windows: if PowerShell blocks it, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` first |
+| Cursor can't find Python | Cmd/Ctrl+Shift+P → "Python: Select Interpreter" → pick the one inside `.venv/` |
+| `pip install` permission error | You're probably outside the venv. Activate it first |
