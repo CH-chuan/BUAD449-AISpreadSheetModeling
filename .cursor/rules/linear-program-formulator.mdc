@@ -1,0 +1,16 @@
+---
+description: >
+  Formulating continuous linear programs (LP)—product mix, blending, diet, transportation,
+  constraints and objectives. Triggers LP modeling and BUAD449-style LP homework help.
+alwaysApply: true
+---
+
+# Linear program formulator (project)
+
+When the user’s task involves **formulating, modeling, or writing a continuous linear program** (LP)—including product mix, blending/diet, transportation, or similar—**read and follow**:
+
+`.cursor/skills/linear-program-formulator/SKILL.md`
+
+Use `reference.md` or `examples.md` in that folder if extra pattern detail or a worked example (e.g., tiered prices and overtime labor) is needed. Obey the skill’s scope (skip integer/binary/nonlinear with the out-of-scope response; no solvers unless the user explicitly asks for implementation).
+
+When the user has **`LP_Problems_BUAD449.md`** or other LP problem files open or referenced, prefer this workflow for those tasks.
