@@ -1,2 +1,6 @@
 cvxpy
 openpyxl
+anthropic>=0.95.0
+python-dotenv>=1.0.0
+openai>=2.0.0
+openai-agents>=0.14.0
