@@ -2,7 +2,7 @@
 
 In Part 1, you used Cursor to help set up your environment. In this part, you'll use Cursor to build a **reusable skill**: a small set of instructions that teaches the agent how to handle a recurring task in a consistent way.
 
-The key idea is that you do **not** start from a blank page. Cursor already has a built-in skill for this: **`create-skill`**. Your job is to use that skill to guide the process, then refine the result based on the behavior you want from the agent.
+The key idea is that you do **not** start from a blank page. Cursor already has a built-in skill for this: `**create-skill`**. Your job is to use that skill to guide the process, then refine the result based on the behavior you want from the agent.
 
 ---
 
@@ -30,7 +30,7 @@ That separation matters because students should learn:
 
 ## Step 1: Start with `create-skill`
 
-Instead of manually designing the skill structure yourself, ask Cursor to use the **`create-skill`** skill.
+Instead of manually designing the skill structure yourself, ask Cursor to use the `**create-skill`** skill.
 
 Here is the kind of prompt to give:
 
@@ -236,7 +236,7 @@ That is the main idea behind agent skills.
 
 You also learned a practical workflow for building them:
 
-1. start with **`create-skill`**,
+1. start with `**create-skill`**,
 2. discuss the requirements,
 3. write `SKILL.md` and any support files,
 4. refine through iteration,
